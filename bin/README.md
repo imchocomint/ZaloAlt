@@ -1,5 +1,3 @@
-<h4 align="right"><strong>English</strong> | <a href="https://github.com/tw93/Pake/blob/master/bin/README_CN.md">简体中文</a></h4>
-
 ## Installation
 
 Ensure that your Node.js version is 18.0 or higher (e.g., 18.20.2). Avoid using `sudo` for the installation. If you encounter permission issues with npm, refer to [How to fix npm throwing error without sudo](https://stackoverflow.com/questions/16151018/how-to-fix-npm-throwing-error-without-sudo).
@@ -39,30 +37,11 @@ npm install pake-cli -g
 
 ## Usage
 
-### Development
-
-The `DEFAULT_DEV_PAKE_OPTIONS` configuration in `bin/defaults.ts` can be modified at development time to match the `pake-cli` configuration description.
-
-```typescript
-export const DEFAULT_DEV_PAKE_OPTIONS: PakeCliOptions & { url: string } = {
-  ...DEFAULT_PAKE_OPTIONS,
-  url: 'https://weread.qq.com',
-  name: 'Weread',
-};
-```
-
-then
-
-```bash
-yarn cli:dev
-```
-
-The script will read the above configuration and packages the specified `app` using `watch` mode, and changes to the `pake-cli` code and `pake` are hot updated in real time.
-
 ### CLI Usage
 
+All-in-one compilation command (require a Zalo icon downloaded):
 ```bash
-pake [url] [options]
+pake chat.zalo.me --name Zalo --icon <path/to/iconfile.extension> --hide-title-bar true --targets all
 ```
 
 The packaged application will be located in the current working directory by default. The first packaging might take some time due to environment configuration. Please be patient.
@@ -82,7 +61,7 @@ Various options are available for customization. You can pass corresponding argu
 Specify the application name. If not provided, you will be prompted to enter it. It is recommended to use English.
 
 ```shell
---name <string>
+--name Zalo
 ```
 
 #### [icon]
@@ -117,26 +96,6 @@ Set the width of the application window. Default is `1200px`.
 
 Enable or disable immersive header. Default is `false`. Use the following command to enable this feature, macOS only.
 
-```shell
---hide-title-bar
-```
-
-#### [fullscreen]
-
-Determine whether the application launches in full screen. Default is `false`. Use the following command to enable full
-screen.
-
-```shell
---fullscreen
-```
-
-#### [activation-shortcut]
-
-Set the activation shortcut for the application. Default is ` `, it does not take effect, you can customize the activation shortcut with the following commands, e.g. `CmdOrControl+Shift+P`, use can refer to [available-modifiers](https://www.electronjs.org/docs/latest/api/accelerator#available-modifiers).
-
-```shell
---activation-shortcut <string>
-```
 
 #### [always-on-top]
 
@@ -144,14 +103,6 @@ Sets whether the window is always at the top level, defaults to `false`.
 
 ```shell
 --always-on-top
-```
-
-#### [disabled-web-shortcuts]
-
-Sets whether to disable web shortcuts in the original Pake container, defaults to `false`.
-
-```shell
---disabled-web-shortcuts
 ```
 
 #### [multi-arch]
@@ -187,14 +138,6 @@ Select the output package format for Linux. Options include `deb`, `appimage`, o
 --targets <format>
 ```
 
-#### [user-agent]
-
-Customize the browser user agent. Default is empty.
-
-```shell
---user-agent <string>
-```
-
 #### [show-system-tray]
 
 Display the system tray. Default is not to display. Use the following command to enable the system tray.
@@ -211,13 +154,6 @@ Specify the system tray icon. This is only effective when the system tray is ena
 --system-tray-icon <path>
 ```
 
-#### [use-local-file]
-
-Enable recursive copying. When the URL is a local file path, enabling this option will copy the folder containing the file specified in the URL, as well as all sub-files, to the Pake static folder. This is disabled by default.
-
-```shell
---use-local-file
-```
 
 #### [inject]
 
@@ -227,15 +163,6 @@ Using `inject`, you can inject local absolute and relative path `css` and `js` f
 --inject ./tools/style.css,./tools/hotkey.js
 ```
 
-#### [safe-domain]
-
-This secure domain is a domain other than your currently configured `url` to which you may be redirected or jumped to, and only in domains that have been configured as secure can you use `tauri` to expose `api` to browsers to ensure that pake's built-in enhancements work correctly. Only in a domain that has been configured as secure can you use the `tauri` to expose the `api` to the browser, ensuring that `pake's` built-in enhancements work correctly.
-
-PS: Secure domains do not need to carry protocols.
-
-```shell
---safe-domain weread.qq.com,google.com
-```
 
 #### [debug]
 
