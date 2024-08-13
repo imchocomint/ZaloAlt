@@ -21,10 +21,21 @@
 - idk
 
 ## won't
-- replace Zalo desktop [(there's a guide on installing it but you try first)](https://sytranvn.dev/posts/zalo-tren-ubuntu/)
+- replace Zalo desktop [(there's a guide on installing it on Linux but you try first)](https://sytranvn.dev/posts/zalo-tren-ubuntu/)
 - sync your Zalo messages prior to the login date (I can't fix this aoc)
 - be mainstream
 - get sued or dmcaed by vng. fuck vng
+
+# Roadmap
+## Phase 1
+- Initial release
+- Basic modification and other platforms' build
+
+## Phase 2
+- Adding support for dark mode and such
+- ? who knows?
+
+## To the future
 
 
 # Shortcuts
