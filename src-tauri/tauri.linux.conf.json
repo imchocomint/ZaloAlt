@@ -8,7 +8,7 @@
       "copyright": "",
       "deb": {
         "depends": ["curl", "wget"],
-        "files": { "/usr/share/applications/z-alt-lx": "assets/z-alt-lx" }
+        "files": { "/usr/share/applications/zaltlx": "assets/zaltlx" }
       },
       "externalBin": [],
       "longDescription": "",
