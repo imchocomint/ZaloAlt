@@ -9,7 +9,7 @@
       "dangerousRemoteDomainIpcAccess": [
         {
           "domain": "chat.zalo.me",
-          "windows": ["pake"],
+          "windows": ["ZaloAlt"],
           "enableTauriAPI": true
         }
       ]

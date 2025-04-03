@@ -1,7 +1,7 @@
 {
   "tauri": {
     "bundle": {
-      "icon": ,
+      "icon": ["/home/imchocomint/ZaloAlt/icon.png"],
       "identifier": "pake.zalt.lnx",
       "active": true,
       "category": "DeveloperTool",
