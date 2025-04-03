@@ -60,13 +60,7 @@ In addition, double-click the title bar to switch to full-screen mode. For Mac u
 
 # Compile (for ZaloAlt)
 **Pake provides a command line tool, making the flow of package customization quicker and easier. See [documentation](./bin/README.md) for more information.**
-Prepare your environment before starting. Make sure you have Rust `>=1.63` and Node `>=16` (e.g., `16.18.1`) installed on your computer. For installation guidance, see [Tauri documentation](https://tauri.app/v1/guides/getting-started/prerequisites).
 
-```sh
-npm i
-npm run dev
-npm run build
-```
 
 # Todo:
 
