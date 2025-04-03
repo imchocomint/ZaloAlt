@@ -38,139 +38,14 @@ npm install pake-cli -g
 ## Usage
 
 ### CLI Usage
+Prepare your environment before starting. Make sure you have Rust `>=1.63` and Node `>=16` (e.g., `16.18.1`) installed on your computer. For installation guidance, see [Tauri documentation](https://tauri.app/v1/guides/getting-started/prerequisites).
 
-All-in-one compilation command (require a Zalo icon downloaded):
-```bash
-pake chat.zalo.me --name Zalo --icon <path/to/iconfile.extension> --hide-title-bar true --targets all
+```sh
+npm i
+npm run dev
+npm run build
 ```
-
-The packaged application will be located in the current working directory by default. The first packaging might take some time due to environment configuration. Please be patient.
-
-> **Note**: Packaging requires the Rust environment. If Rust is not installed, you will be prompted for installation confirmation. In case of installation failure or timeout, you can [install it manually](https://www.rust-lang.org/tools/install).
-
-### [url]
-
-The URL is the link to the web page you want to package or the path to a local HTML file. This is mandatory.
-
-### [options]
-
-Various options are available for customization. You can pass corresponding arguments during packaging to achieve the desired configuration.
-
-#### [name]
-
-Specify the application name. If not provided, you will be prompted to enter it. It is recommended to use English.
-
-```shell
---name Zalo
-```
-
-#### [icon]
-
-Specify the application icon. Supports both local and remote files. By default, it uses the Pake brand icon. For custom icons, visit [icon icons](https://icon-icons.com) or [macOSicons](https://macosicons.com/#/).
-
-- For macOS, use `.icns` format.
-- For Windows, use `.ico` format.
-- For Linux, use `.png` format.
-
-```shell
---icon <path>
-```
-
-#### [height]
-
-Set the height of the application window. Default is `780px`.
-
-```shell
---height <number>
-```
-
-#### [width]
-
-Set the width of the application window. Default is `1200px`.
-
-```shell
---width <number>
-```
-
-#### [hide-title-bar]
-
-Enable or disable immersive header. Default is `false`. Use the following command to enable this feature, macOS only.
-
-
-#### [always-on-top]
-
-Sets whether the window is always at the top level, defaults to `false`.
-
-```shell
---always-on-top
-```
-
-#### [multi-arch]
-
-Package the application to support both Intel and M1 chips, exclusively for macOS. Default is `false`.
-
-##### Prerequisites
-
-- Note: After enabling this option, Rust must be installed using rustup from the official Rust website. Installation via brew is not supported.
-- For Intel chip users, install the arm64 cross-platform package to support M1 chips using the following command:
-
-  ```shell
-  rustup target add aarch64-apple-darwin
-  ```
-
-- For M1 chip users, install the x86 cross-platform package to support Intel chips using the following command:
-
-  ```shell
-  rustup target add x86_64-apple-darwin
-  ```
-
-##### Usage
-
-```shell
---multi-arch
-```
-
-#### [targets]
-
-Select the output package format for Linux. Options include `deb`, `appimage`, or `all`. If `all` is selected, both `deb` and `appimage` will be packaged. Default is `all`.
-
-```shell
---targets <format>
-```
-
-#### [show-system-tray]
-
-Display the system tray. Default is not to display. Use the following command to enable the system tray.
-
-```shell
---show-system-tray
-```
-
-#### [system-tray-icon]
-
-Specify the system tray icon. This is only effective when the system tray is enabled. The icon must be in `.ico` or `.png` format and should be an image with dimensions ranging from 32x32 to 256x256 pixels.
-
-```shell
---system-tray-icon <path>
-```
-
-
-#### [inject]
-
-Using `inject`, you can inject local absolute and relative path `css` and `js` files into the page you specify the `url` to customize it. For example, an adblock script that can be applied to any web page, or a `css` that optimizes the `UI` of a page, you can write it once to customize it. would only need to write the `app` once to generalize it to any other page.
-
-```shell
---inject ./tools/style.css,./tools/hotkey.js
-```
-
-
-#### [debug]
-
-The typed package has dev-tools for debugging, in addition to outputting more log messages for debugging.
-
-```shell
---debug
-```
+When it says that it can't create a .deb package, do not panic. Go to `$HOME/ZaloAlt/src-tauri/target/release/bundle/deb/`. Find the folder which has the name like this: `zalo-alt_x.y.z_amd64`. Go there and create a Debian package or whatever you want.
 
 ## Conclusion
 
