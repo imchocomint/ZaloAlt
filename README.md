@@ -12,7 +12,9 @@
 - Lighter than the official Zalo app (in term of program size)
 - Faster (probably)
 - Never take your storage for granted
-- Support Linux (hey someone please test it for me)
+- Support Linux**
+
+** see Bugs
 
 # What it will/won't do
 ## will:
@@ -36,7 +38,13 @@
 - ? who knows?
 
 ## To the future
-- Allowing the client to sync messages and accept/initiate calls. This depends on how VNG treated the web client. Even the Windows version over Wine can't make or accept call.
+- Allowing the client to sync messages and accept/initiate calls. This depends on how VNG treats the web client. Even the Windows version over Wine can't make or accept call.
+
+# Bugs
+
+[ ] Right-clicking on an image element in the page to open the menu and select download image or other events does not work (common in MacOS systems). This issue is due to the MacOS built-in webview not supporting this feature.
+
+[ ] The software currently don't happen to work in Debian (Trixie/Sid) (missing dependencies). I've just moved to Debian and will find a way to fix this asap. On Ubuntu and derriatives it works.
 
 # Shortcuts
 <br/>
@@ -68,19 +76,6 @@ In addition, double-click the title bar to switch to full-screen mode. For Mac u
 1. Plugins support. See [Advanced Usage of Pake](https://github.com/tw93/Pake/wiki/Advanced-Usage-of-Pake).
 
 # A thank-you list to be added
-
-
-
-# Frequently Asked Questions
-
-1. Right-clicking on an image element in the page to open the menu and select download image or other events does not work (common in MacOS systems). This issue is due to the MacOS built-in webview not supporting this feature.
-
-# Support Pake, the base of the project
-
-1. He has two cats, TangYuan and Coke. If you think Pake delights your life, you can feed them <a href="https://miaoyan.app/cats.html?name=Pake" target="_blank">some canned food 🥩</a>.
-2. If you like Pake, you can star it on GitHub. Also, welcome to [recommend Pake](https://twitter.com/intent/tweet?url=https://github.com/tw93/Pake&text=%23Pake%20-%20A%20simple%20Rust%20packaged%20web%20pages%20to%20generate%20Mac%20App%20tool,%20compared%20to%20traditional%20Electron%20package,%20the%20size%20of%20nearly%2040%20times%20smaller,%20generally%20about%202M,%20the%20underlying%20use%20of%20Tauri,%20performance%20experience%20than%20the%20JS%20framework%20is%20much%20lighter~) to your friends.
-3. You can follow his [Twitter](https://twitter.com/HiTw93) to get the latest news of Pake or join their [Telegram](https://t.me/+GclQS9ZnxyI2ODQ1) chat group.
-4. Recommend them a website that would be great for a Mac App.
 
 # Support me
 
