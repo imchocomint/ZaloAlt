@@ -1,3 +1,6 @@
+# Attention: continual development for ZaloAlt is now halted as the owner of the repository is trying to find a new way to port Zalo with complete functionality to Linux. Bug fixes will not be released, unless a CVE appears.
+
+
 <h1 align="center">ZaloAlt</h1>
 <p align="center"><strong>Alternative Zalo client built using <a href="https://www.rust-lang.org/">Rust</a>, <a href="https://tauri.app/">Tauri</a> and <a href="https://github.com/tw93/Pake">Pake</a>.</strong></p>
 <div align="center">
@@ -42,9 +45,9 @@
 
 # Bugs
 
-[ ] Right-clicking on an image element in the page to open the menu and select download image or other events does not work (common in MacOS systems). This issue is due to the MacOS built-in webview not supporting this feature.
+- [ ] Right-clicking on an image element in the page to open the menu and select download image or other events does not work (common in MacOS systems). This issue is due to the MacOS built-in webview not supporting this feature.
 
-[ ] The software currently don't happen to work in Debian (Trixie/Sid) (missing dependencies). I've just moved to Debian and will find a way to fix this asap. On Ubuntu and derriatives it works.
+- [ ] The software currently don't happen to work in Debian (anything newer than trixie) (missing dependencies). On Ubuntu and derriatives it works.
 
 # Shortcuts
 <br/>
