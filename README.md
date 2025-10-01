@@ -1,4 +1,4 @@
-# Attention: continual development for ZaloAlt is now halted as the owner of the repository is trying to find a new way to port Zalo with complete functionality to Linux. Bug fixes will not be released, unless a CVE appears.
+# In progress of merging between Pake versions. Development will be slow.
 
 
 <h1 align="center">ZaloAlt</h1>
