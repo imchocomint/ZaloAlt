@@ -1,7 +1,7 @@
 name: Bug report
 description: Problems with the software
-title: "[Bug] "
-labels: ["bug"]
+title: '[Bug] '
+labels: ['bug']
 body:
   - type: markdown
     attributes:
@@ -28,7 +28,7 @@ body:
     attributes:
       label: Pake version
       description: >
-        Please provide the version of Pake you are using. If you are using the main/dev branch, please provide the commit id.
+        Please provide the version of Pake you are using. If you are using the master/dev branch, please provide the commit id.
     validations:
       required: true
   - type: textarea
@@ -73,4 +73,4 @@ body:
         - label: I'm willing to submit a PR!
   - type: markdown
     attributes:
-      value: "Thanks for completing our form!"
+      value: 'Thanks for completing our form!'

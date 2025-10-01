@@ -1,13 +1,20 @@
 {
-  "productName": "weekly",
-  "bundle": {
-    "icon": ["png/weekly_512.png"],
-    "active": true,
-    "linux": {
+  "tauri": {
+    "bundle": {
+      "icon": ["/home/imchocomint/ZaloAlt/icon.png"],
+      "identifier": "pake.zalt.lnx",
+      "active": true,
+      "category": "DeveloperTool",
+      "copyright": "",
       "deb": {
-        "depends": ["curl", "wget"]
-      }
-    },
-    "targets": ["deb", "appimage"]
+        "depends": ["curl", "wget"],
+        "files": { "/usr/share/applications/zaltlx": "assets/zaltlx" }
+      },
+      "externalBin": [],
+      "longDescription": "",
+      "resources": [],
+      "shortDescription": "",
+      "targets": ["deb", "appimage"]
+    }
   }
 }

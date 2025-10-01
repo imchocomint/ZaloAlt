@@ -1,7 +1,23 @@
 {
-  "bundle": {
-    "icon": ["icons/weekly.icns"],
-    "active": true,
-    "targets": ["dmg"]
+  "tauri": {
+    "bundle": {
+      "icon": ["icons/weread.icns"],
+      "identifier": "com.z.alt",
+      "active": true,
+      "category": "DeveloperTool",
+      "copyright": "",
+      "externalBin": [],
+      "longDescription": "",
+      "macOS": {
+        "entitlements": null,
+        "exceptionDomain": "",
+        "frameworks": [],
+        "providerShortName": null,
+        "signingIdentity": null
+      },
+      "resources": [],
+      "shortDescription": "",
+      "targets": ["dmg"]
+    }
   }
 }

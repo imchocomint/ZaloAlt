@@ -1,14 +1,24 @@
 {
-  "bundle": {
-    "icon": ["png/weekly_256.ico", "png/weekly_32.ico"],
-    "active": true,
-    "resources": ["png/weekly_32.ico"],
-    "targets": ["msi"],
-    "windows": {
-      "digestAlgorithm": "sha256",
-      "wix": {
-        "language": ["en-US"],
-        "template": "assets/main.wxs"
+  "tauri": {
+    "bundle": {
+      "icon": ,
+      "identifier": "com.zalt.win",
+      "active": true,
+      "category": "DeveloperTool",
+      "copyright": "",
+      "externalBin": [],
+      "longDescription": "",
+      "resources": ["png/weread_32.ico"],
+      "shortDescription": "",
+      "targets": ["msi"],
+      "windows": {
+        "certificateThumbprint": null,
+        "digestAlgorithm": "sha256",
+        "timestampUrl": "",
+        "wix": {
+          "language": ["en-US"],
+          "template": "assets/main.wxs"
+        }
       }
     }
   }
